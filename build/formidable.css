@@ -1,0 +1,9 @@
+.frm-control {
+  display: block;
+  margin-top: 15px;
+}
+.frm-control:after {
+  content: "";
+  display: table;
+  clear: both;
+}
