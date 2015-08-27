@@ -1,7 +1,7 @@
 formidable.css
 ======
 
-Another CSS library to display nice and accessible web form.
+A CSS library to have nice, accesible & customizable forms.
 
 
 How to Contribute
