@@ -1,8 +1,61 @@
 @import "mixins/clearfix";
 
-.frm-control {
-  display: block;
-  margin-top: 1em;
+$namespace: 'frm-';
 
-  @include frm-clearfix();
+.#{$namespace}input {
+  display: block;
+  height: 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #ccc;
+  resize: vertical;
+
+  font: inherit;
+  color: inherit;
+}
+
+.#{$namespace}input__group,
+.#{$namespace}input__addon-group {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.#{$namespace}input__addon-group {
+  table-layout: auto;
+}
+
+.#{$namespace}input__item,
+.#{$namespace}input__addon {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 100%;
+
+  &:not(:first-child) > * {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:not(:last-child) > * {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.#{$namespace}input__addon-group {
+  > &:not(:last-child) > * {
+    text-align: right;
+  }
+}
+
+.#{$namespace}input__addon {
+  width: auto;
+  & > * {
+    width: auto;
+  }
+}
+
+.#{$namespace}input--readonly {
+  background: #eee;
 }
