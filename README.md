@@ -3,6 +3,14 @@ formidable.css
 
 A CSS library to have nice, accesible & customizable forms.
 
+Check out [the live demo](http://tzi.github.io/formidable.css/demo).
+
+
+Compatibility
+--------
+
+IE 8+
+
 
 How to Contribute
 --------
