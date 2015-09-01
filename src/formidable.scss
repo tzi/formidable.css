@@ -15,22 +15,15 @@ $namespace: 'frm-';
   color: inherit;
 }
 
-.#{$namespace}input__group,
-.#{$namespace}input__addon-group {
+.#{$namespace}group {
   display: table;
-  width: 100%;
   table-layout: fixed;
+  width: 100%;
 }
 
-.#{$namespace}input__addon-group {
-  table-layout: auto;
-}
-
-.#{$namespace}input__item,
-.#{$namespace}input__addon {
+.#{$namespace}group__item {
   display: table-cell;
   vertical-align: bottom;
-  width: 100%;
 
   &:not(:first-child) > * {
     border-left: 0;
@@ -43,16 +36,38 @@ $namespace: 'frm-';
   }
 }
 
-.#{$namespace}input__addon-group {
-  > &:not(:last-child) > * {
-    text-align: right;
+.#{$namespace}add-on {
+  display: table;
+  width: 100%;
+}
+
+.#{$namespace}add-on__object,
+.#{$namespace}add-on__body {
+  display: table-cell;
+  vertical-align: bottom;
+
+  &:not(:first-child) > * {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:not(:last-child) > * {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
-.#{$namespace}input__addon {
-  width: auto;
+.#{$namespace}add-on__object {
   & > * {
     width: auto;
+  }
+}
+
+.#{$namespace}add-on__body {
+  width: 100%;
+
+  > &:not(:last-child) > * {
+    text-align: right;
   }
 }
 
